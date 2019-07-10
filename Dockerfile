@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-LABEL maintainer "halkjaer"
+LABEL maintainer "no"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -10,7 +10,7 @@ RUN apt-get update \
 
 WORKDIR /tmp
 
-RUN git clone https://github.com/nicehash/nheqminer.git \
+RUN git clone https://github.com/veruscoin/nheqminer.git \
   && cd nheqminer/cpu_xenoncat/asm_linux/ \
   && sh assemble.sh \
   && cd ../../../ \
